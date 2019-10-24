@@ -1,0 +1,23 @@
+{
+  "name": "augorama",
+  "version": "1.0.0",
+  "description": "actor system for digital twin hosting",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/navicore/augorama-js.git"
+  },
+  "keywords": [
+    "actors",
+    "iot"
+  ],
+  "author": "Ed Sweeney",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/navicore/augorama-js/issues"
+  },
+  "homepage": "https://github.com/navicore/augorama-js#readme"
+}
