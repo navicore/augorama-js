@@ -1,0 +1,12 @@
+http://localhost:3000
+-ks
+Content-Type: application/json; charset=utf-8
+--
+
+--
+POST /api/contacts
+{"first": "Ed", "last": "Sweeney"}
+--
+GET /api/contacts
+--
+GET /api/contacts/5b249376-04ac-4765-a230-88cc93968dfb
