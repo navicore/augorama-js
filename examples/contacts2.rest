@@ -1,0 +1,12 @@
+http://localhost:3000
+-ks
+Content-Type: application/json; charset=utf-8
+--
+
+--
+POST /api/navicore/contacts
+{"first": "Liza", "last": "Artist"}
+--
+GET /api/navicore/contacts
+--
+GET /api/navicore/contacts/eeb33a1e-9c82-4c95-b517-1f4838ff759c
