@@ -17,6 +17,18 @@ const ContactProtocolTypes = {
    NOT_FOUND: 'NOT_FOUND'
 };
 
+const delay = duration => new Promise((resolve) => setTimeout(()=>resolve(), duration));
+
+const resetWithExponentialDelay = (factor) => {
+    let count = 0;    
+    return async (msg, error, ctx) => {                
+        let delay =  (2**count - 1)*factor;
+        await delay(delay);
+        count = count+1;        
+        return ctx.reset;
+    };
+} 
+
 const spawnUserContactService = (parent, userId) => spawn(
   parent,
   (state = { contacts:{} }, msg, ctx) => {    
@@ -89,7 +101,8 @@ const spawnContactsService = (parent) => spawnStateless(
     }
     dispatch(childActor, msg, ctx.sender);
   },
-  'contacts'
+  'contacts',
+  { onCrash: resetWithExponentialDelay }
 );
 
 const contactsService = spawnContactsService(system);

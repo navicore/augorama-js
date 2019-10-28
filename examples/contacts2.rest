@@ -9,4 +9,4 @@ POST /api/navicore/contacts
 --
 GET /api/navicore/contacts
 --
-GET /api/navicore/contacts/eeb33a1e-9c82-4c95-b517-1f4838ff759c
+GET /api/navicore/contacts/5ca701f0-3a83-49c0-892c-e74e61ed07f8
